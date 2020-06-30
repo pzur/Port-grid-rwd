@@ -19,6 +19,42 @@ body::-webkit-scrollbar-thumb {
 .wrapper {
     min-height: 100vh;
 }
+.to-top{
+	color:rgb(107, 104, 104);
+    padding-top:1.35em;
+    padding-left: 1em;
+	display:block;
+	position:fixed;
+	border-color:rgb(107, 104, 104);
+	text-decoration:none;
+    transition:all .5s ease-out;
+    text-align: center;
+    right: 30px;
+}
+.to-top:before{
+	content:'▲';
+	font-size:1.2em;
+	position:absolute;
+	top:0;
+    /* left:50%; */
+    right: auto;
+	margin-left:-.7em;
+	border:solid .13em rgb(14, 12, 12);
+	border-radius:10em;
+	width:1.4em;
+	height:1.4em;
+	line-height:1.3em;
+	border-color:inherit;
+	transition:transform .5s ease-in;
+}
+.to-top:hover{
+	color:black;
+	border-color:black;
+}
+.to-top:hover:before{
+	transform: rotate(360deg);
+}
+
 h1 {
     color: #fff;
     padding-left: 20px;
@@ -99,6 +135,11 @@ header {
     width: 40px;
     height: 40px;
     margin: 0 10px;
+    transition: all .5s ;
+}
+.social-link:hover{
+    transform: scale(1.4) rotate(360deg);
+    
 }
 .social-link.linkendin {
     background-image: url(/img/linkedin-with-circle.svg);
